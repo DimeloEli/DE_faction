@@ -52,12 +52,12 @@ end)
 -- EMS Events
 RegisterNetEvent('DE_faction:server:heal')
 AddEventHandler('DE_faction:server:heal', function(target)
-    TriggerClientEvent('TP_misc:heal', target, 'big', true)
+    TriggerClientEvent('esx_ambulancejob:heal', target, 'big', true)
 end)
 
 RegisterNetEvent('DE_faction:server:revive')
 AddEventHandler('DE_faction:server:revive', function(target)
-    TriggerClientEvent('TP_misc:revive', target)
+    TriggerClientEvent('esx_ambulancejob:revive', target)
 end)
 
 RegisterNetEvent('DE_faction:server:EMSDrag')
