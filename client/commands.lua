@@ -28,3 +28,19 @@ end)
 RegisterCommand('fextra', function(source, args, rawCommand)
     TriggerEvent('DE_faction:getExtras')
 end)
+
+RegisterCommand('frevive', function(source, args, rawCommand)
+    local id = tonumber(args[1])
+
+    if ESX.PlayerData.job.name ~= 'police' and ESX.PlayerData.job.name ~= 'ambulance' then return end
+
+    TriggerServerEvent('DE_faction:server:revive', id)
+end)
+
+RegisterCommand('fheal', function(source, args, rawCommand)
+    local id = tonumber(args[1])
+
+    if ESX.PlayerData.job.name ~= 'police' and ESX.PlayerData.job.name ~= 'ambulance' then return end
+
+    TriggerServerEvent('DE_faction:server:heal', id)
+end)
